@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Irrigation Logistics Application</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 style="text-align:center">Irrigation Logistics Application</h1>
+<h2>Output Below</h2>
+<p th:text="'field: ' + ${input.field}" />
+<p th:text="'tap: ' + ${input.tap}" />
+<a href="/input">Submit Another Logistical Challenge</a>
+</body>
+</html>

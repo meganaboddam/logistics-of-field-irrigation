@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Irrigation Logistics Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 style="text-align:center">Irrigation Logistics Application</h1>
+<h2>Input Logistical Parameters Below</h2>
+<form action="#" th:action="@{/input}" th:object="${input}" method="post">
+    <p>Area of Square Field (sq meter):
+        <input type="number" min="1" step="1" th:field="*{field}" />
+    </p>
+    <p>Area of Circular Field Covered by One Irrigation Tap (sq meter):
+        <input type="number" min="1" step="1" th:field="*{tap}" />
+    </p>
+    <p>
+        <em>Note: Second input area must be smaller than first input area. If it is not, the output will be nonsensical.</em>
+    </p>
+    <p>
+        <strong>Pressing submit will output a picture of a field with suggested locations of irrigation taps.</strong>
+    </p>
+    <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    </p>
+</form>
+</body>
+</html>
